@@ -5,4 +5,6 @@ jobs:
      runs-on: ubuntu-latest
      steps:
           - name: Hello steps
-            run: echo "welocome to GHA"
+            run: |  
+              echo "this is line one"
+              echo "this is line two"
