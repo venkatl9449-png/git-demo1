@@ -1,20 +1,10 @@
-name: Hello world
+name: 
 on: push
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: build step
-        run: echo "hello, ${{ secrets.DOCKER_PASSWORDS }}"
-  test:
-     runs-on: ubuntu-latest
-     needs: build
-     steps:
-       - name: Test step
-         run: echo "running test"
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-       - name: deploy the app
-         run: echo "deploy test job"
+    - name: Checkout the code
+      uses: actions/checkout@v4
+    - name: Print index.html file
+      run: cat index.html
